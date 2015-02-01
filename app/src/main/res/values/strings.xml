@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Espresso</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="trying_espresso">Trying out Espresso!</string>
     <string name="action_settings">Settings</string>
 
 </resources>
