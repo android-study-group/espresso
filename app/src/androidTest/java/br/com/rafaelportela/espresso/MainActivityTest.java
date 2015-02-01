@@ -6,6 +6,7 @@ import android.test.suitebuilder.annotation.LargeTest;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 @LargeTest
@@ -22,6 +23,10 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
     }
 
     public void testMainActivity() throws Exception {
-        onView(withText("Hello world!")).check(matches(isDisplayed()));
+        onView(withText("Trying out Espresso!"))
+                .check(matches(isDisplayed()));
+
+        onView(withId(R.id.server_response))
+                .check(matches(withText("hello from server")));
     }
 }
